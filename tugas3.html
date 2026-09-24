@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Kalkulator</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #dff3ff;
+            text-align: center;
+            padding-top: 60px;
+        }
+
+        .kalkulator {
+            width: 320px;
+            margin: auto;
+            padding: 25px;
+            background: #ffffff;
+            border: 3px solid #a9dfff;
+            border-radius: 20px;
+            box-shadow: 0 5px 15px #b8dff2;
+        }
+
+        h2 {
+            color: #5aa9d6;
+        }
+
+        input {
+            width: 85%;
+            padding: 10px;
+            margin: 8px;
+            border: 2px solid #b9e3f7;
+            border-radius: 10px;
+            outline: none;
+        }
+
+        button {
+            padding: 10px 15px;
+            margin: 5px;
+            border: none;
+            border-radius: 12px;
+            background: #a9ddf7;
+            color: #285b73;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #8ed1f0;
+        }
+
+        #output {
+            margin-top: 15px;
+            padding: 12px;
+            background: #eaf8ff;
+            border-radius: 12px;
+            color: #4382a5;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="kalkulator">
+        <h2>📌 Kalkulator 🔍</h2>
+
+        <input type="number" id="bilangan1" placeholder="Bilangan 1">
+        <input type="number" id="bilangan2" placeholder="Bilangan 2">
+
+        <div>
+            <button onclick="hitung('+')">+</button>
+            <button onclick="hitung('-')">−</button>
+            <button onclick="hitung('*')">×</button>
+            <button onclick="hitung('/')">÷</button>
+        </div>
+
+        <div id="output">look the result</div>
+    </div>
+
+    <script>
+        function hitung(operator) {
+            let a = Number(document.getElementById("bilangan1").value);
+            let b = Number(document.getElementById("bilangan2").value);
+            let hasil;
+
+            if (operator == "+") {
+                hasil = a + b;
+            } else if (operator == "-") {
+                hasil = a - b;
+            } else if (operator == "*") {
+                hasil = a * b;
+            } else if (operator == "/") {
+                hasil = b != 0 ? a / b : "Tidak bisa dibagi 0";
+            }
+
+            document.getElementById("output").innerHTML = "Hasil: " + hasil + " 🗝️";
+        }
+    </script>
+
+</body>
+</html>

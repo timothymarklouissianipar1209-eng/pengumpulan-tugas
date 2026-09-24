@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas 2 Proweb</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+    <h1>Form Pengisian Data Diri</h1>
+
+    <form action+"#">
+        Nama:<br>
+        <input type="text" name="nama" placeholder="Input Nama"><br><br>
+
+        <label for="sandi">Password:</label><br>
+        <input type="password" name="sandi"><br><br>
+
+        <label for="alamat">✅Alamat:</label><br>
+        <textarea name="alamat" id="alamat" cols="30" rows="5" placeholder="Input alamat lengkap Anda di sini"></textarea><br><br>
+
+        <label for="prodi">Program Studi:</label><br>
+        <select name="prodi" id="prodi">
+            <option value="ilkom">S1 Ilmu Komputer</option>
+            <option value="ti">S1 Teknologi Informasi</option>
+            <option value="s2ti">S2 Teknologi Informatika</option>
+        </select><br><br>
+
+        <label for="tgllahir">Tanggal Lahir:</label><br>
+        <input type="date" id="tgllahir" name="tgllahir"><br><br>
+
+        <button type="submit" name="btnRegister">Register</button>
+        <input type="reset" value="Reset">
+    </form>
+</body>
+</html>
